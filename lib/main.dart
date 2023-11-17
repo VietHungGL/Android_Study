@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:study_app/mixins/user-two.dart';
 import 'package:study_app/model/user.dart';
+import 'package:study_app/user_const_final.dart';
 
+const double pi = 3.14;
+const String TAG = 'My Tag';
+
+final int a = 0;
 void main() {
   // User user = User(1,'yên');
   // user.logInfor();
@@ -13,11 +18,16 @@ void main() {
   // user.showCity1();
   // user.showAddress();
   // runApp(const MyApp());
-  Usera user = Usera(1, 'hung');
-  user.logFavorite();
-  user.playFootball();
-  user.logReadBook();
+  // Usera user2 = Usera(1, 'hung');
+  // user2.logFavorite();
+  // user2.playFootball();
+  // user2.logReadBook();
+  // user2.logExtension();
+  User_Const_Final user_const_final = User_Const_Final(1, 'hung');
+  user_const_final.name = 'yên';
+
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

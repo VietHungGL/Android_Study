@@ -353,7 +353,21 @@ print('tôi chơi bóng đá');
 }
 }
 
+kế thừa dùng extent
+trừu tượng dùng abstract
+interface dùng implement
+mixin dùng with
+------------------------------------------------------
+phân biệt const và final
+const hằng số không bao giờ thay đổi
+final gaanfn giống với const
 
+khác nhau giữa 2 thằng:
+final ít nghiêm ngặt hơn, nó chứa các giá trị không thay đổi, và giá trị
+đó có thể không xác định trong một khoảng thười gian ngay cả sau khi biên dịch, nhưng một khi nó đã xác định thì giá trị đó không bao giờ thay đổi
+
+instance variables chỉ có thể là final không thể là const
+const chỉ có thể là static variables
 
 
 

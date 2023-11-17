@@ -20,3 +20,9 @@ class Usera with Football, ReadBook{
     print('tôi chơi bóng đá');
   }
 }
+
+extension MyExtension on Usera {
+  void logExtension() {
+    print('đây là extension');
+  }
+} 
