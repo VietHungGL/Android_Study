@@ -368,6 +368,64 @@ final ít nghiêm ngặt hơn, nó chứa các giá trị không thay đổi, v�
 
 instance variables chỉ có thể là final không thể là const
 const chỉ có thể là static variables
+---------------------------------------------------------
+So sánh và phân biệt StatelessWidget & StatefulWidget trong Flutter
+
+-So sánh:
+StatelessWidget sẽ không có initState và setState, và nó chỉ sử dụng khi 
+giao diện người dùng không thay đổi.
+
+StatefulWidget: nó sẽ dùng initState,setState và nó dùng khi giao diện
+người dùng có thay đổi.
+VD:
+// Tạo ra StatelessWidget
+class LoadWidget extends StatelessWidget {
+final bool loading;
+LoadWidget(this.loading);
+
+@override
+Widget build(BuildContext context) {
+return loading ? const CircularProgressIndicator() : const Text('StatelessWidget');
+}
+}
+// Tạo ra StatefulWidget
+class LoadWidget2 extends StatefulWidget {
+final bool loading;
+
+LoadWidget2(this.loading);
+
+@override
+State<StatefulWidget> createState() {
+return StateLoadWidget2();
+}
+
+}
+
+class StateLoadWidget2 extends State<LoadWidget2>{
+late bool _localLoading;
+@override
+void initState() {
+_localLoading = widget.loading;
+}
+@override
+Widget build(BuildContext context) {
+return _localLoading ? const CircularProgressIndicator() : FloatingActionButton(onPressed: onClickButTom);
+}
+
+void onClickButTom() {
+setState(() {
+_localLoading = true;
+});
+}
+}
+-----------------------------------------------
+Phân biệt Expanded vs Flexible trong Flutter
+Expanded: lấp đầy những khoảng trống mà hắn có sẵn
+Flexible: nó sử dụng rộng hơn Expanded(bản rút gọn của
+Flexible)
+fit: FlexFit.tight, chặt chẽ nó sẽ giống Expanded
+fit: FlexFit.loose, lỏng lẻo lúc này k còn phụ
+thuộc vào flex:1 hay 2 nữa
 
 
 
