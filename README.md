@@ -419,7 +419,15 @@ _localLoading = true;
 }
 }
 -----------------------------------------------
-bai 43
+Phân biệt Expanded vs Flexible trong Flutter
+Expanded: lấp đầy những khoảng trống mà hắn có sẵn
+Flexible: nó sử dụng rộng hơn Expanded(bản rút gọn của
+Flexible)
+fit: FlexFit.tight, chặt chẽ nó sẽ giống Expanded
+fit: FlexFit.loose, lỏng lẻo lúc này k còn phụ
+thuộc vào flex:1 hay 2 nữa
+
+
 
 
 
